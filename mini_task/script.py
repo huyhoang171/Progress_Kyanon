@@ -56,7 +56,7 @@ def process_data():
         df_clean = df[[c for c in final_columns if c in df.columns]]
 
         # --- LƯU RA CSV ---
-        df_clean.to_csv(OUTPUT_CSV_FILE, index=False, encoding='utf-8')
+        df_clean.to_csv(OUTPUT_CSV_FILE, index=False, encoding='utf-8-sig')
         print(f"   -> Đã lưu file CSV sạch: {OUTPUT_CSV_FILE}")
 
         # --- NHẬP VÀO SQLITE ---

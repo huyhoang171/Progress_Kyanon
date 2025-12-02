@@ -1,4 +1,4 @@
-place_id,name,rating,user_ratings_total,latitude,longitude,address,types
+﻿place_id,name,rating,user_ratings_total,latitude,longitude,address,types
 ChIJD8KhXACNaTERUQB0chVSDP4,"Quán ăn 98: bún, mỳ quảng, cơm trưa",4.8,6,15.3466963,108.2269634,"98 Võ Nguyên Giáp, TT. Trà My, Bắc Trà My, Quảng Nam, Việt Nam",Nhà hàng gia đình
 ChIJOXYlFgDdQTERFX9bdspopaA,Cơm Hương Đào,4.2,6,15.9232423,107.6492535,"WJFX+9MQ, Hồ Chí Minh, TT. P Rao, Đông Giang, Quảng Nam, Việt Nam",Nhà hàng cơm
 ChIJ51pKXwDdQTERAnByCLoasms,Quán cơm,,0,15.9261291,107.6477096,"168 Đ. Hồ Chí Minh, TT. P Rao, Đông Giang, Quảng Nam, Việt Nam",Nhà hàng cơm
