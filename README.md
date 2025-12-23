@@ -59,7 +59,7 @@ A complete data pipeline including:
 ## 🔗 Useful Links
 
 - [Mini Task Project](mini_task/)
-- [Data Engineering Notes](Data_Engineering_Training.xlsx)
+- [Data Engineering Notes](https://view.officeapps.live.com/op/view.aspx?src=https://github.com/huyhoang171/Progress_Kyanon/raw/refs/heads/main/Data_Engineering_Training%20.xlsx)
 
 ---
 
