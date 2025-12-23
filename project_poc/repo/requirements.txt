@@ -1,0 +1,6 @@
+pandas
+requests
+pyyaml
+python-dotenv
+google-cloud-storage
+google-auth

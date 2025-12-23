@@ -1,0 +1,49 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+venv/
+*.egg-info/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Data folders ---
+# data/raw/
+# data/cleaned/
+# data/curated/
+# *.csv
+*.parquet
+*.xlsx
+
+# --- Config secrets ---
+config/creds.json
+config/*.key
+config/*.pem
+
+# --- Airflow ---
+airflow/logs/
+airflow/plugins/__pycache__/
+airflow/dags/__pycache__/
+
+# --- Docker ---
+*.log
+docker-compose.override.yml
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- IDE files ---
+.vscode/
+.idea/
+
+# --- LOG folder ---
+logs/
+
+# --- Secret files ---
+secrets/
+*.json

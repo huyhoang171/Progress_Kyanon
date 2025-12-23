@@ -1,0 +1,7 @@
+# Cleaned data directory
+This directory contains transformed and cleaned data files.
+
+## Files:
+- `hdi_cleaned.csv` - Cleaned HDI data
+- `wdi_cleaned.csv` - Cleaned WDI data
+

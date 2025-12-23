@@ -1,0 +1,61 @@
+gcp:
+  project_id: "chapter-talos"
+  bucket: "kfresh-de"
+
+paths:
+  base_dir: "/opt/airflow/data"
+  settings_path: "/opt/airflow/config/settings.yaml"
+  
+  raw: "raw"
+  cleaned: "cleaned"
+  curated: "curated"
+  
+  raw_path: "/opt/airflow/data/raw"
+  cleaned_path: "/opt/airflow/data/cleaned"
+  curated_path: "/opt/airflow/data/curated"
+
+countries:
+  asean_10:
+    - VNM
+    - THA
+    - SGP
+    - PHL
+    - MMR
+    - MYS
+    - LAO
+    - IDN
+    - KHM
+    - BRN
+
+sources:
+  hdi:
+    url: "https://hdrdata.org/api/CompositeIndices/query-detailed?apikey=HDR-E7QF6KmtnAbP2T3wD2P5MPdo94bAzJtP&countryOrAggregation=VNM,THA,SGP,PHL,MMR,MYS,LAO,IDN,KHM,BRN&indicator=hdi,le,mys"
+    file_type: "csv"
+
+  wdi:
+    base_url: "https://api.worldbank.org/v2/country"
+    indicators:
+      gdp_per_capita: "NY.GDP.PCAP.CD"
+      fdi_net_inflows: "BX.KLT.DINV.CD.WD"
+    format: "json"
+    per_page: 5000
+
+bigquery:
+  dataset: "hdi_wdi_poc"
+  table_int: "int_hdi_wdi"
+
+# FEATURE ENGINEERING CONFIGURATION
+feature_engineering:
+  - target_col: FDI_to_HDI_Ratio
+    formula: FDI_Net_Inflows / HDI_Value
+
+# FEATURE ENGINEERING CATEGORIZATION RULES
+hdi_rules:
+  - label: "Low"
+    max_value: 0.550
+  - label: "Medium"
+    max_value: 0.700
+  - label: "High"
+    max_value: 0.800
+  - label: "Very High"
+    max_value: 1.01

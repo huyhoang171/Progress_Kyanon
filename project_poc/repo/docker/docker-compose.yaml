@@ -1,0 +1,77 @@
+version: "3.9"
+
+services:
+
+  airflow-webserver:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.airflow
+    container_name: airflow-webserver
+    env_file:
+      - ../.env
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=SequentialExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:////opt/airflow/airflow.db
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS}
+      - GCP_PROJECT_ID=${GCP_PROJECT_ID}
+      - GCS_BUCKET=${GCS_BUCKET}
+      - CONFIG_PATH=${CONFIG_PATH}
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../airflow/dags:/opt/airflow/dags
+      - ../src:/opt/airflow/src
+      - ../config:/opt/airflow/config
+      - airflow-db:/opt/airflow
+      - ../data:/opt/airflow/data
+      - ../secrets:/opt/airflow/secrets
+      - ../config:/opt/airflow/config
+    command: >
+      bash -c "airflow db init &&
+             airflow users create --username airflow --firstname Admin --lastname User --role Admin --email admin@example.com --password airflow || true &&
+             airflow webserver"
+
+  airflow-dev:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.airflow
+    container_name: airflow-dev
+    command: bash -c "tail -f /dev/null"
+    volumes:
+      - ..:/workspace
+      - ../data:/opt/airflow/data 
+    working_dir: /workspace
+
+
+  airflow-scheduler:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.airflow
+    container_name: airflow-scheduler
+    env_file:
+      - ../.env
+    depends_on:
+      - airflow-webserver
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=SequentialExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:////opt/airflow/airflow.db
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS}
+      - GCP_PROJECT_ID=${GCP_PROJECT_ID}
+      - GCS_BUCKET=${GCS_BUCKET}
+    volumes:
+      - ../airflow/dags:/opt/airflow/dags
+      - ../src:/opt/airflow/src
+      - ../config:/opt/airflow/config
+      - airflow-db:/opt/airflow
+      - ../data:/opt/airflow/data
+      - ../secrets:/opt/airflow/secrets
+    command: >
+      bash -c "
+      sleep 10 &&
+      airflow scheduler
+      "
+
+volumes:
+  airflow-db:
