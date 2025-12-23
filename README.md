@@ -10,12 +10,7 @@ This folder documents my Data Engineering learning journey and related activitie
 progress/
 ├── Data_Engineering_Training.xlsx    # Training notes and learning records
 ├── mini_task/                        # Mini projects
-│   ├── source_data.json             # Source data from Apify
-│   ├── cleaned_locations.csv        # Cleaned and processed data
-│   ├── places_data.db              # SQLite database
-│   ├── script.py                   # ETL pipeline script
-│   ├── query.py                    # SQL ranking query
-│   └── README.md                   # Project details
+├── project_poc/                      # Proof-of-concept projects
 └── README.md                         # This file
 ```
 
@@ -27,6 +22,7 @@ progress/
 - Notes on concepts and knowledge learned
 - Learning progress tracking
 - Reference materials and documentation
+- [Click here to view directly](https://view.officeapps.live.com/op/view.aspx?src=https://github.com/huyhoang171/Progress_Kyanon/raw/refs/heads/main/Data_Engineering_Training%20.xlsx)
 
 ### 2️⃣ mini_task/
 **Project: Apify Data Crawling & Processing**
@@ -45,14 +41,18 @@ A complete data pipeline including:
 
 👉 [View project details at mini_task/README.md](mini_task/README.md)
 
+### 3️⃣ project_poc/
+Project: HDI/WDI ETL proof-of-concept — a small data engineering project that ingests Human Development Index (HDI) and World Development Indicators (WDI), transforms and integrates them, and produces curated CSV outputs.
+
 ---
 
 ## 📈 Timeline
 
 | Week | Content |
 |------|---------|
-| Last week | Completed mini_task: Data crawling & processing pipeline |
-| This week | Documentation updates and continued learning... |
+| week 1 | Build core technical foundations required for data pipeline work. |
+| week 2 | Understand data structures and database schema design. |
+| week 3 | Learn Apache Airflow and ETL orchestration. |
 
 ---
 
