@@ -44,6 +44,23 @@ A complete data pipeline including:
 ### 3️⃣ project_poc/
 Project: HDI/WDI ETL proof-of-concept — a small data engineering project that ingests Human Development Index (HDI) and World Development Indicators (WDI), transforms and integrates them, and produces curated CSV outputs.
 
+### 4️⃣ mini_airflow/
+**Project: Apache Airflow DAG Development**
+
+A hands-on exploration of workflow orchestration including:
+- ✅ DAG design and scheduling
+- ✅ Task dependencies and error handling
+- ✅ Data pipeline automation
+- ✅ Monitoring and logging
+
+**Tech Stack:**
+- Apache Airflow
+- Python
+- PostgreSQL/SQLite
+- Cron scheduling
+
+👉 [View project details at mini_airflow/README.md](mini_airflow/README.md)
+
 ---
 
 ## 📈 Timeline
@@ -53,6 +70,8 @@ Project: HDI/WDI ETL proof-of-concept — a small data engineering project that 
 | week 1 | Build core technical foundations required for data pipeline work. |
 | week 2 | Understand data structures and database schema design. |
 | week 3 | Learn Apache Airflow and ETL orchestration. |
+| week 4 | Learn distributed data processing with PySpark. |
+| week 5 | Learn cloud components used in data pipelines. |
 
 ---
 
