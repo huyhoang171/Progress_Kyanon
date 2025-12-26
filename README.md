@@ -11,6 +11,7 @@ progress/
 ├── Data_Engineering_Training.xlsx    # Training notes and learning records
 ├── mini_task/                        # Mini projects
 ├── project_poc/                      # Proof-of-concept projects
+├── mini_airflow                      # Mini Airflow projects
 └── README.md                         # This file
 ```
 
