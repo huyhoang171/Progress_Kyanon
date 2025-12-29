@@ -52,9 +52,3 @@ FROM `your-project.reviews_dataset.Staging_Reviews`
 LIMIT 10;
 ```
 
-Technical notes
-- `main.py` currently exposes the handler `transform_reviews_gcs`  make sure to use this as the entry point when deploying.
-- `main.py` required `import os` for `os.path.basename`; that import has been added.
-
-Next steps
-- If you want, I can run the local test now or rename this file to `README.md`.
