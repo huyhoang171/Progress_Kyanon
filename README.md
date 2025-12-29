@@ -10,6 +10,7 @@ This folder documents my Data Engineering learning journey and related activitie
 progress/
 ├── Data_Engineering_Training.xlsx    # Training notes and learning records
 ├── mini_task/                        # Mini projects
+├── cloud_etl_pipeline/              # Cloud ETL pipeline project
 ├── project_poc/                      # Proof-of-concept projects
 ├── mini_airflow                      # Mini Airflow projects
 └── README.md                         # This file
@@ -62,6 +63,12 @@ A hands-on exploration of workflow orchestration including:
 
 👉 [View project details at mini_airflow/README.md](mini_airflow/README.md)
 
+### 5️⃣ cloud_etl_pipeline
+**Project: Cloud ETL Pipeline**
+
+Short description: A set of ETL examples for learning and experimenting with data pipelines (extract → transform → load). It includes sample scripts to extract data from `source_data.json`, perform transformations (in `transform/`), and write preprocessed CSV files to `staging/`.
+
+👉 [View details at cloud_etl_pipeline/README.md](cloud_etl_pipeline/README.md)
 ---
 
 ## 📈 Timeline
