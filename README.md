@@ -70,7 +70,6 @@ Short description: A set of ETL examples for learning and experimenting with dat
 
 👉 [View details at cloud_etl_pipeline/README.md](cloud_etl_pipeline/README.md)
 
-
 ---
 
 ## 📈 Timeline
