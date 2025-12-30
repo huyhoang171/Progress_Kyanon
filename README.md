@@ -12,7 +12,8 @@ progress/
 ├── mini_task/                        # Mini projects
 ├── cloud_etl_pipeline/              # Cloud ETL pipeline project
 ├── project_poc/                      # Proof-of-concept projects
-├── mini_airflow                      # Mini Airflow projects
+├── mini_airflow/                      # Mini Airflow projects
+├── my_data_project/                  # Dbt DuckDB project
 └── README.md                         # This file
 ```
 
@@ -69,6 +70,13 @@ A hands-on exploration of workflow orchestration including:
 Short description: A set of ETL examples for learning and experimenting with data pipelines (extract → transform → load). It includes sample scripts to extract data from `source_data.json`, perform transformations (in `transform/`), and write preprocessed CSV files to `staging/`.
 
 👉 [View details at cloud_etl_pipeline/README.md](cloud_etl_pipeline/README.md)
+
+### 6️⃣ my_data_project
+**Project: my_demo_dbt**
+
+Short description: A small example dbt project demonstrating a simple ELT workflow
+
+👉 [View details at my_data_project/README.md](my_data_project/my_demo_dbt/README.md)
 
 ---
 
