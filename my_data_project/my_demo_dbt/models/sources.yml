@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: main_raw
+    schema: main
+    tables:
+      - name: raw_customers
+      - name: raw_products
+      - name: raw_orders
